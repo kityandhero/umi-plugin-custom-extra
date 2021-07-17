@@ -55,7 +55,7 @@
   },
   "dependencies": {},
   "keywords": [
-    "@umijs/plugin-custom-extra"
+    "umi-plugin-custom-extra"
   ],
   "author": "kityandhero",
   "license": "MIT"
