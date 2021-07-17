@@ -28,6 +28,7 @@
       "git add"
     ]
   },
+  "dependencies": {},
   "devDependencies": {
     "@umijs/test": "^3.0.10",
     "babel-plugin-import": "^1.13.3",
@@ -53,7 +54,6 @@
     "lib": "lib",
     "test": "test"
   },
-  "dependencies": {},
   "keywords": [
     "umi-plugin-custom-extra"
   ],
