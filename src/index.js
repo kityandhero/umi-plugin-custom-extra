@@ -8,8 +8,6 @@ export default function(api) {
     key: 'headerExtraLinks',
     config: {
       schema(joi) {
-        console.log(joi);
-
         return joi.array();
       },
     },
