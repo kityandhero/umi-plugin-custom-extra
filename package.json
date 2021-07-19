@@ -1,5 +1,5 @@
 {
-  "name": "umijs-plugin-custom-extra",
+  "name": "umi-plugin-custom-extra",
   "main": "lib/index.js",
   "description": "extra",
   "authors": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kityandhero/umijs-plugin-custom-extra.git"
+    "url": "git+https://github.com/kityandhero/umi-plugin-custom-extra.git"
   },
   "scripts": {
     "start": "cross-env APP_ROOT=example umi dev",
@@ -58,5 +58,9 @@
     "umi-plugin-custom-extra"
   ],
   "author": "kityandhero",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kityandhero/umijs-plugin-custom-extra/issues"
+  },
+  "homepage": "https://github.com/kityandhero/umijs-plugin-custom-extra#readme"
 }
