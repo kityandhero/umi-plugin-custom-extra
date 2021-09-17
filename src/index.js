@@ -36,7 +36,7 @@ export default function(api) {
       api.modifyBabelOpts(babelOpts => {
         babelOpts.compact = api.userConfig.extraCustomOption.babelCompact;
 
-        // api.logger.info(JSON.stringify(babelOpts));
+        api.logger.info(JSON.stringify({ babelConfig: babelOpts }));
 
         return babelOpts;
       });
