@@ -15,7 +15,7 @@
     "build": "father-build",
     "build:p": "npm run build && npm run publish:f",
     "publish:f": "npm version patch && npm publish",
-    "publish:npm": "nrm use npm && nrm ls && npm run publish:f && nrm use vd && nrm ls",
+    "publish:npm": "nrm use npm && nrm ls && npm run build:p && nrm use vd && nrm ls",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
