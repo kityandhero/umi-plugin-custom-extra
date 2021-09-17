@@ -13,14 +13,7 @@ export default function(api) {
     },
   });
 
-  api.describe({
-    key: 'babelExtraOption',
-    config: {
-      schema(joi) {
-        return joi.object();
-      },
-    },
-  });
+
 
   if (api.userConfig.headerExtraLinks) {
     api.addHTMLLinks(() => {
@@ -34,6 +27,15 @@ export default function(api) {
       return result;
     });
   }
+
+  api.describe({
+    key: 'babelExtraOption',
+    config: {
+      schema(joi) {
+        return joi.object();
+      },
+    },
+  });
 
   if (api.userConfig.babelExtraOption) {
     api.modifyBabelOpts(babelOpts => {
