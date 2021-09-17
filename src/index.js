@@ -14,12 +14,14 @@ export default function(api) {
   });
 
   if (api.userConfig.extraCustomOption) {
+    api.logger.info(JSON.stringify(api.userConfig.extraCustomOption));
+
     const headerExtraLinks =
       api.userConfig.extraCustomOption.headerExtraLinks || [];
 
     if (headerExtraLinks.length > 0) {
       api.addHTMLLinks(() => {
-        const result = (api.config.headerExtraLinks || []).map(o => {
+        const result = headerExtraLinks.map(o => {
           return {
             rel: 'stylesheet',
             href: o,
@@ -30,14 +32,14 @@ export default function(api) {
       });
     }
 
-    if ((api.userConfig.extraCustomOption.babelCompact || 'auto') !== 'auto') {
-      if (typeof api.userConfig.extraCustomOption.babelCompact === 'boolean') {
-        api.modifyBabelOpts(babelOpts => {
-          babelOpts.compact = api.userConfig.extraCustomOption.babelCompact;
+    if (typeof api.userConfig.extraCustomOption.babelCompact === 'boolean') {
+      api.modifyBabelOpts(babelOpts => {
+        babelOpts.compact = api.userConfig.extraCustomOption.babelCompact;
 
-          return babelOpts;
-        });
-      }
+        // api.logger.info(JSON.stringify(babelOpts));
+
+        return babelOpts;
+      });
     }
   }
 }
