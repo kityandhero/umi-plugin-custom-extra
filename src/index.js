@@ -2,7 +2,7 @@
 // - https://umijs.org/plugins/api
 
 export default function(api) {
-  api.logger.info('use plugin');
+  api.logger.info('use umi-plugin-custom-extra');
 
   api.describe({
     key: 'extraCustomOption',
