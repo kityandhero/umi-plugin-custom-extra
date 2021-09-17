@@ -17,7 +17,7 @@ export default function(api) {
     key: 'babelExtraOption',
     config: {
       schema(joi) {
-        return joi.boolean();
+        return joi.object();
       },
     },
   });
