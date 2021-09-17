@@ -13,6 +13,15 @@ export default function(api) {
     },
   });
 
+  api.describe({
+    key: 'babelExtraOption',
+    config: {
+      schema(joi) {
+        return joi.boolean();
+      },
+    },
+  });
+
   if (api.userConfig.headerExtraLinks) {
     api.addHTMLLinks(() => {
       const result = (api.config.headerExtraLinks || []).map(o => {
@@ -23,6 +32,12 @@ export default function(api) {
       });
 
       return result;
+    });
+  }
+
+  if (api.userConfig.babelExtraOption) {
+    api.modifyBabelOpts(babelOpts => {
+      return { ...babelOpts, ...(api.userConfig.babelExtraOption || {}) };
     });
   }
 }
